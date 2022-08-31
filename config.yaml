@@ -1,4 +1,13 @@
 options:
+  close_timeout:
+    type: string
+    default: ""
+    description: |
+      Close timeout closes the harvester after the predefined time, e.g. "5m",
+      whether the file has been fully read or not.  If unset (the default),
+      this option is disabled.
+      n.b. this has the potential to cause data loss. Make sure to read and
+      understand the docs for this option before enabling it.
   install_sources:
     type: string
     default: "deb https://artifacts.elastic.co/packages/6.x/apt stable main"
